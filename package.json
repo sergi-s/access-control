@@ -12,6 +12,7 @@
   "dependencies": {
     "http": "^0.0.1-security",
     "net": "^1.0.2",
+    "node-fetch": "^3.3.0",
     "serialport": "^10.5.0",
     "ws": "^8.11.0"
   },

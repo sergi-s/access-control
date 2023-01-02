@@ -1,6 +1,7 @@
 
 import { SerialPort } from "serialport";
 import { ReadlineParser } from "@serialport/parser-readline";
+import fetch from "node-fetch";
 
 
 // ========================================================================
@@ -12,7 +13,7 @@ const main = (async ({ arduinoComNumber = 'COM7', scannerComNumber = 'COM8', ard
 
   // working
   const QrScannerSerialPort = new SerialPort({ path: scannerComNumber, baudRate: 9600 })
-  listenToQrScanner({ scanner: QrScannerSerialPort, arduino: arduinoSerialPort, relayNumber: arduinoReplayNumber });
+  listenToQrScanner({ scanner: QrScannerSerialPort, arduino: "arduinoSerialPort", relayNumber: arduinoReplayNumber });
 });
 
 // ------------------------------------------------------------------------
@@ -69,4 +70,4 @@ async function validateQrcode(qrcode) {
 
 // ------------------------------------------------------------------------
 
-main({ arduinoComNumber: 'COM7', scannerComNumber: 'COM8', arduinoReplayNumber: 1 });
+main({ arduinoComNumber: 'COM7', scannerComNumber: 'COM9', arduinoReplayNumber: 1 });
